@@ -1,0 +1,1 @@
+// manages product related operations

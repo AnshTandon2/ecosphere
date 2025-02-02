@@ -1,0 +1,1 @@
+// product schema and model
