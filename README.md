@@ -1,8 +1,8 @@
-#### ECOSPHERE
+# ECOSPHERE
 
 EcoSphere is an e-commerce platform that allows users to buy and sell products.
 
-#### Tech Stack
+### Tech Stack
 
 - React
 - Redux
@@ -12,7 +12,7 @@ EcoSphere is an e-commerce platform that allows users to buy and sell products.
 - Stripe
 - AWS S3
 
-#### Installation
+### Installation
 
 1. Clone the repository
 2. Run `npm install` to install the dependencies
