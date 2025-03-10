@@ -5,6 +5,16 @@ const asyncHandler = require("express-async-handler");
 const User = require("../models/User");
 const ErrorResponse = require("../utils/errorResponse");
 
+const blacklist = new Set();
+
+exports.logout = asyncHandler(async (req, res, next) => {
+  if (req.token) {
+    blacklist.add(req.token); // Store in Redis or DB in a real implementation
+  }
+  res.cookie("token", "", { httpOnly: true, expires: new Date(0) });
+  res.status(200).json({ success: true, message: "Logged out successfully" });
+});
+
 // Protect routes
 exports.protect = asyncHandler(async (req, res, next) => {
   let token;
