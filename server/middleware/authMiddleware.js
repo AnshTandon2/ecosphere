@@ -11,6 +11,7 @@ exports.logout = asyncHandler(async (req, res, next) => {
   if (req.token) {
     blacklist.add(req.token); // Store in Redis or DB in a real implementation
   }
+  res.cookie("token", "", { httpOnly: true, expires: new Date(0) });
   res.status(200).json({ success: true, message: "Logged out successfully" });
 });
 
