@@ -1,7 +1,7 @@
 // JWT-based authentication middleware
 
 const jwt = require("jsonwebtoken");
-const asyncHandler = require("express-async-handler");
+("express-async-handler");
 const User = require("../models/User");
 const ErrorResponse = require("../utils/errorResponse");
 
